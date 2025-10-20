@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presidential Decisions - Game</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Game Screen -->
+    <div id="gameScreen" class="screen active">
+        <div class="game-container-reigns">
+            <!-- Header with Year and Month -->
+            <div class="game-header-reigns">
+                <button class="btn-menu" onclick="returnToMenu()">Menu</button>
+                <div class="year-display">
+                    <span id="yearDisplay">Year 1</span>
+                    <span id="monthDisplay">Month 1/12</span>
+                </div>
+                <div class="mode-display" id="modeDisplay">Unlimited</div>
+            </div>
+
+            <!-- Factor Bars (Top of screen) -->
+            <div class="factors-container">
+                <div class="factor">
+                    <div class="factor-icon">💰</div>
+                    <div class="factor-bar-container">
+                        <div class="factor-bar" id="economyBar" style="width: 50%"></div>
+                    </div>
+                    <div class="factor-label">Economy</div>
+                </div>
+                <div class="factor">
+                    <div class="factor-icon">🌱</div>
+                    <div class="factor-bar-container">
+                        <div class="factor-bar" id="environmentBar" style="width: 50%"></div>
+                    </div>
+                    <div class="factor-label">Environment</div>
+                </div>
+                <div class="factor">
+                    <div class="factor-icon">❤️</div>
+                    <div class="factor-bar-container">
+                        <div class="factor-bar" id="supportBar" style="width: 50%"></div>
+                    </div>
+                    <div class="factor-label">Support</div>
+                </div>
+                <div class="factor">
+                    <div class="factor-icon">🛡️</div>
+                    <div class="factor-bar-container">
+                        <div class="factor-bar" id="securityBar" style="width: 50%"></div>
+                    </div>
+                    <div class="factor-label">Security</div>
+                </div>
+            </div>
+
+            <!-- Card Container -->
+            <div class="card-display-container">
+                <div class="swipe-hint" id="swipeHint">
+                    <span class="hint-reject">← REJECT</span>
+                    <span class="hint-approve">APPROVE →</span>
+                </div>
+
+                <div class="card-stack" id="cardStack">
+                    <!-- Cards will be dynamically inserted here -->
+                </div>
+
+                <!-- Impact Preview -->
+                <div class="impact-preview" id="impactPreview" style="display: none;">
+                    <div class="impact-left" id="impactLeft"></div>
+                    <div class="impact-right" id="impactRight"></div>
+                </div>
+            </div>
+
+            <!-- Swipe Instructions -->
+            <div class="swipe-instructions">
+                Swipe or use Arrow Keys: ← Reject | → Approve
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Over Screen -->
+    <div id="gameOverScreen" class="screen">
+        <div class="game-over-container">
+            <div class="game-over-content">
+                <h1 id="gameOverTitle">Game Over</h1>
+                <p id="gameOverMessage"></p>
+                <div id="gameOverStats" class="game-over-stats"></div>
+                <button class="btn btn-primary" onclick="returnToMenu()">Return to Menu</button>
+                <button class="btn btn-secondary" onclick="restartGame()" style="margin-top: 10px;">Play Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/game.js"></script>
+</body>
+</html>

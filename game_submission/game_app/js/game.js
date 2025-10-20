@@ -326,11 +326,7 @@ function startGame(mode = 'unlimited', years = null) {
   // Shuffle proposals
   gameState.proposalsDeck = shuffleArray([...presidentialProposals])
 
-  // Update UI
-  document.getElementById('menuScreen').classList.remove('active')
-  document.getElementById('gameScreen').classList.add('active')
-  document.getElementById('gameOverScreen').classList.remove('active')
-
+  // Update UI (screens are managed via separate HTML files)
   updateUI()
   renderCurrentCard()
 }
@@ -660,7 +656,7 @@ function endGame(factor, value) {
     </div>
   `
 
-  document.getElementById('gameScreen').classList.remove('active')
+  document.getElementById('gameScreen').style.display = 'none'
   document.getElementById('gameOverScreen').classList.add('active')
 }
 
@@ -704,14 +700,27 @@ function endGameSuccess() {
     </div>
   `
 
-  document.getElementById('gameScreen').classList.remove('active')
+  document.getElementById('gameScreen').style.display = 'none'
   document.getElementById('gameOverScreen').classList.add('active')
 }
 
 // Return to Menu
 function returnToMenu() {
-  document.getElementById('menuScreen').classList.add('active')
-  document.getElementById('gameScreen').classList.remove('active')
-  document.getElementById('gameOverScreen').classList.remove('active')
-  document.getElementById('yearInput').style.display = 'none'
+  window.location.href = 'index.html';
 }
+
+// Initialize game on page load
+window.addEventListener('DOMContentLoaded', () => {
+  // Parse URL parameters
+  const urlParams = new URLSearchParams(window.location.search);
+  const mode = urlParams.get('mode');
+  const years = urlParams.get('years');
+
+  if (mode) {
+    if (mode === 'unlimited') {
+      startGame('unlimited');
+    } else if (mode === 'limited' && years) {
+      startGame('limited', parseInt(years));
+    }
+  }
+});

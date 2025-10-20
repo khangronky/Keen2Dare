@@ -4,24 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Presidential Decisions - Reigns of Leadership</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <!-- Menu Screen -->
-    <div id="menuScreen" class="screen active">
+    <div class="screen active">
         <div class="menu-container">
             <div class="menu-content">
                 <h1 class="menu-title">Presidential Decisions</h1>
                 <p class="menu-subtitle">Balance your nation's future through wise leadership</p>
 
                 <div class="menu-description">
-                    <h2>How to Play</h2>
+                    <h2>Quick Guide</h2>
                     <ul>
                         <li>Swipe LEFT to REJECT or RIGHT to APPROVE each proposal</li>
-                        <li>Each year presents 12 monthly proposals</li>
                         <li>Balance 4 factors: Economy, Environment, Public Support, and Security</li>
                         <li>If any factor reaches 0% or 100%, you lose</li>
-                        <li>Keep all factors balanced to maintain power</li>
                         <li>Survive as long as possible!</li>
                     </ul>
                 </div>
@@ -30,7 +28,7 @@
                     <h3>Select Game Mode</h3>
                     <div class="mode-buttons">
                         <button class="mode-btn" onclick="showYearInput()">Limited Years</button>
-                        <button class="mode-btn" onclick="startGame('unlimited')">Unlimited Years</button>
+                        <button class="mode-btn" onclick="window.location.href='game.html?mode=unlimited'">Unlimited Years</button>
                     </div>
                 </div>
 
@@ -40,94 +38,24 @@
                     <button class="btn btn-primary" onclick="startGameWithYears()">Start Game</button>
                 </div>
 
-                <button class="btn btn-primary" onclick="startGame('unlimited')" style="margin-top: 20px;">Quick Start - Unlimited Mode</button>
+                <div class="menu-links">
+                    <a href="about.html" class="btn btn-secondary">How to Play</a>
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- Game Screen -->
-    <div id="gameScreen" class="screen">
-        <div class="game-container-reigns">
-            <!-- Header with Year and Month -->
-            <div class="game-header-reigns">
-                <button class="btn-menu" onclick="returnToMenu()">Menu</button>
-                <div class="year-display">
-                    <span id="yearDisplay">Year 1</span>
-                    <span id="monthDisplay">Month 1/12</span>
-                </div>
-                <div class="mode-display" id="modeDisplay">Unlimited</div>
-            </div>
+    <script>
+        function showYearInput() {
+            document.getElementById('yearInput').style.display = 'block';
+        }
 
-            <!-- Factor Bars (Top of screen) -->
-            <div class="factors-container">
-                <div class="factor">
-                    <div class="factor-icon">💰</div>
-                    <div class="factor-bar-container">
-                        <div class="factor-bar" id="economyBar" style="width: 50%"></div>
-                    </div>
-                    <div class="factor-label">Economy</div>
-                </div>
-                <div class="factor">
-                    <div class="factor-icon">🌱</div>
-                    <div class="factor-bar-container">
-                        <div class="factor-bar" id="environmentBar" style="width: 50%"></div>
-                    </div>
-                    <div class="factor-label">Environment</div>
-                </div>
-                <div class="factor">
-                    <div class="factor-icon">❤️</div>
-                    <div class="factor-bar-container">
-                        <div class="factor-bar" id="supportBar" style="width: 50%"></div>
-                    </div>
-                    <div class="factor-label">Support</div>
-                </div>
-                <div class="factor">
-                    <div class="factor-icon">🛡️</div>
-                    <div class="factor-bar-container">
-                        <div class="factor-bar" id="securityBar" style="width: 50%"></div>
-                    </div>
-                    <div class="factor-label">Security</div>
-                </div>
-            </div>
-
-            <!-- Card Container -->
-            <div class="card-display-container">
-                <div class="swipe-hint" id="swipeHint">
-                    <span class="hint-reject">← REJECT</span>
-                    <span class="hint-approve">APPROVE →</span>
-                </div>
-
-                <div class="card-stack" id="cardStack">
-                    <!-- Cards will be dynamically inserted here -->
-                </div>
-
-                <!-- Impact Preview -->
-                <div class="impact-preview" id="impactPreview" style="display: none;">
-                    <div class="impact-left" id="impactLeft"></div>
-                    <div class="impact-right" id="impactRight"></div>
-                </div>
-            </div>
-
-            <!-- Swipe Instructions -->
-            <div class="swipe-instructions">
-                Swipe or use Arrow Keys: ← Reject | → Approve
-            </div>
-        </div>
-    </div>
-
-    <!-- Game Over Screen -->
-    <div id="gameOverScreen" class="screen">
-        <div class="game-over-container">
-            <div class="game-over-content">
-                <h1 id="gameOverTitle">Game Over</h1>
-                <p id="gameOverMessage"></p>
-                <div id="gameOverStats" class="game-over-stats"></div>
-                <button class="btn btn-primary" onclick="returnToMenu()">Return to Menu</button>
-                <button class="btn btn-secondary" onclick="restartGame()" style="margin-top: 10px;">Play Again</button>
-            </div>
-        </div>
-    </div>
-
-    <script src="game.js"></script>
+        function startGameWithYears() {
+            const years = parseInt(document.getElementById('yearsToPlay').value);
+            if (years && years > 0) {
+                window.location.href = `game.html?mode=limited&years=${years}`;
+            }
+        }
+    </script>
 </body>
 </html>
