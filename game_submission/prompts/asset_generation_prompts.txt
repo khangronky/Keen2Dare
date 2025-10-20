@@ -1,0 +1,14 @@
+The game is inspired by the Reigns-style decision mechanic, where the player acts as a “Minister of Climate Affairs.” 
+Each turn, the player swipes or clicks to “Approve” or “Reject” environmental policies. Every decision affects four main indicators: 
+- Environment
+- Economy
+- People
+- Energy
+
+The art style should be minimalist, modern, and easy to integrate into a web browser using HTML, CSS, and JavaScript.
+
+Visual Style:
+- Vibrant but balanced color palette (greens, blues, oranges, purples).
+- Simple iconography that conveys meaning instantly.
+- A professional yet playful aesthetic that reflects both education and humor.
+
