@@ -561,6 +561,12 @@ body::before {
   letter-spacing: 0.5px;
 }
 
+.card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
 /* Card Display */
 .card-display-container {
   flex: 1;
@@ -572,11 +578,8 @@ body::before {
 }
 
 .swipe-hint {
-  position: absolute;
-  top: 20px;
-  left: 0;
-  right: 0;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   padding: 0 30px;
   z-index: 1;

@@ -3,3 +3,6 @@ Make the game smoother, more polished, and bug-free.
 Using background with dark theme, could you add three backward        
 circles with three specific colors, covered with very blurred layer (note: three circles could be floated or had lively motions, but dont need to        
 significantly moved)
+
+c:\Users\NguyenKhang\Documents\Keen2Dare\game_submission\game_app\css\styles.css for swipe-hint and card-display-container, pls make them a flex       
+column
