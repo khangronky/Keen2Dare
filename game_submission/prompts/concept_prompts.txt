@@ -1,0 +1,19 @@
+Help me brainstorm a creative and engaging concept for a web-based 2D game that educates players about climate action and sustainability in Vietnam or Australia. 
+
+Make the web-based game both fun and meaningful to play in a browser, but impactful enough to make players reflect on real-world environmental challenges.
+The theme focuses on climate action and sustainability policy choices.
+
+Key objectives:
++ The game should make players experience the trade-offs between environmental, social, and economic decisions.
++ It should be humorous and slightly satirical (like the “Reigns” mobile game) so players can laugh at the dilemmas of being a leader trying to balance progress and sustainability.
++ Each decision should have clear consequences shown in stats or visuals (e.g., Environment, Economy, People, Energy).
++ The player should feel the tension between doing what’s good for the planet and what’s politically or economically easy.
+
+Gameplay mechanics:
++ The player acts as the "Minister of Climate Affairs" or "Eco Prime Minister".
++ Each turn, the player receives a policy proposal card (e.g., “Ban plastic bags?”, “Build a new coal power plant?”, “Invest in solar farms?”).
++ They can swipe or click “Approve” or “Reject”.
++ Each decision affects four stats: Environment, Economy, People’s Support, and Energy Supply.
++ If any of these stats reach 0 or 100, the government collapses, ending the game.
++ Random events can appear (floods, protests, power shortages, etc.) to challenge the player’s balance.
++ The aim is to survive as many “years” as possible while keeping a balanced society.
