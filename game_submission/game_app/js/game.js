@@ -363,6 +363,13 @@ function startGame(mode = 'unlimited', years = null) {
 
 // Restart Game
 function restartGame() {
+  // Hide game over screen and show game screen
+  document.getElementById('gameOverScreen').classList.remove('active')
+  document.getElementById('gameOverScreen').style.display = 'none'
+  document.getElementById('gameScreen').style.display = 'flex'
+  document.getElementById('gameScreen').classList.add('active')
+
+  // Restart the game with same mode and years
   startGame(gameState.gameMode, gameState.maxYears)
 }
 
