@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climate Quest - Extended Edition</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Menu Screen -->
+    <div id="menuScreen" class="screen active">
+        <div class="menu-container">
+            <div class="menu-content">
+                <h1 class="menu-title">Climate Quest</h1>
+                <p class="menu-subtitle">Lead the world to a sustainable future</p>
+                
+                <div class="menu-description">
+                    <h2>How to Play</h2>
+                    <ul>
+                        <li>You have 30 years to transform the global economy</li>
+                        <li>Choose from 12+ climate actions each year</li>
+                        <li>Manage budget, public support, and technology advancement</li>
+                        <li>Reach 20% emissions and 80% public support to win</li>
+                        <li>Random events will challenge your strategy</li>
+                    </ul>
+                </div>
+
+                <div class="difficulty-selector">
+                    <h3>Select Difficulty</h3>
+                    <div class="difficulty-buttons">
+                        <button class="difficulty-btn" onclick="startGame('easy')">Easy</button>
+                        <button class="difficulty-btn" onclick="startGame('normal')">Normal</button>
+                        <button class="difficulty-btn" onclick="startGame('hard')">Hard</button>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary" onclick="startGame('normal')" style="margin-top: 20px;">Start Game</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Screen -->
+    <div id="gameScreen" class="screen">
+        <div class="game-container">
+            <!-- Header -->
+            <div class="game-header">
+                <h1>Climate Quest</h1>
+                <button class="btn btn-secondary" onclick="returnToMenu()">Menu</button>
+            </div>
+
+            <!-- Stats Panel -->
+            <div class="stats-panel">
+                <div class="stat-card">
+                    <div class="stat-label">Year</div>
+                    <div class="stat-value" id="yearDisplay">1</div>
+                    <div class="stat-bar">
+                        <div class="stat-bar-fill" id="yearBar" style="width: 3%"></div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-label">Budget</div>
+                    <div class="stat-value" id="budgetDisplay">$100B</div>
+                    <div class="stat-bar">
+                        <div class="stat-bar-fill" id="budgetBar" style="width: 100%"></div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-label">Emissions</div>
+                    <div class="stat-value" id="emissionsDisplay">100%</div>
+                    <div class="stat-bar">
+                        <div class="stat-bar-fill" id="emissionsBar" style="width: 100%; background: linear-gradient(90deg, #10b981, #f59e0b);"></div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-label">Public Support</div>
+                    <div class="stat-value" id="supportDisplay">50%</div>
+                    <div class="stat-bar">
+                        <div class="stat-bar-fill" id="supportBar" style="width: 50%; background: linear-gradient(90deg, #06b6d4, #10b981);"></div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-label">Technology</div>
+                    <div class="stat-value" id="techDisplay">1</div>
+                    <div class="stat-bar">
+                        <div class="stat-bar-fill" id="techBar" style="width: 20%; background: linear-gradient(90deg, #a78bfa, #06b6d4);"></div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-label">Score</div>
+                    <div class="stat-value" id="scoreDisplay">0</div>
+                    <div class="stat-bar">
+                        <div class="stat-bar-fill" id="scoreBar" style="width: 0%; background: linear-gradient(90deg, #f59e0b, #ef4444);"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event Notification -->
+            <div class="event-notification" id="eventNotification"></div>
+
+            <!-- Game Message -->
+            <div class="game-message" id="gameMessage"></div>
+
+            <!-- Action Cards -->
+            <div class="cards-container">
+                <div id="cardsGrid" class="cards-grid"></div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+                <button class="btn btn-secondary" onclick="skipYear()">Skip Year</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Over Screen -->
+    <div id="gameOverScreen" class="screen">
+        <div class="game-over-container">
+            <div class="game-over-content">
+                <h1 id="gameOverTitle">Game Over</h1>
+                <p id="gameOverMessage"></p>
+                <div id="gameOverStats" class="game-over-stats"></div>
+                <button class="btn btn-primary" onclick="returnToMenu()">Return to Menu</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
