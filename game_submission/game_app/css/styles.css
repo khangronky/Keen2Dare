@@ -645,6 +645,16 @@ body::before {
   box-shadow: 0 10px 40px rgba(16, 185, 129, 0.5);
 }
 
+.card-image {
+  width: 100%;
+  max-width: 300px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
 .card-advisor {
   font-size: 1rem;
   color: var(--text-secondary);
@@ -824,6 +834,12 @@ body::before {
 
   .card-description {
     font-size: 1rem;
+  }
+
+  .card-image {
+    max-width: 250px;
+    height: 150px;
+    margin-bottom: 15px;
   }
 
   .game-over-content {
