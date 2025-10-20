@@ -648,6 +648,15 @@ function endGame(factor, value) {
     security: 'Security',
   }
 
+  // Play game over audio
+  const gameOverAudio = document.getElementById('gameOverAudio')
+  if (gameOverAudio) {
+    gameOverAudio.currentTime = 0
+    gameOverAudio.play().catch(error => {
+      console.log('Audio playback failed:', error)
+    })
+  }
+
   const gameOverTitle = document.getElementById('gameOverTitle')
   const gameOverMessage = document.getElementById('gameOverMessage')
   const gameOverStats = document.getElementById('gameOverStats')
