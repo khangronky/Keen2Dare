@@ -1,0 +1,7 @@
+Generate a complete interactive web game in HTML, CSS, and JavaScript that follows a Reigns-style yes/no decision mechanic. 
+
+The player makes climate policy decisions, and four indicators (Environment, Economy, People, Energy) change based on each choice. 
+
+Include animations, hover effects, and a restart feature.
+ 
+The design should be responsive and modern, with glowing gradients and smooth transitions.

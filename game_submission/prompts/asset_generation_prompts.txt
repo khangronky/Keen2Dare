@@ -1,14 +1,3 @@
-The game is inspired by the Reigns-style decision mechanic, where the player acts as a “Minister of Climate Affairs.” 
-Each turn, the player swipes or clicks to “Approve” or “Reject” environmental policies. Every decision affects four main indicators: 
-- Environment
-- Economy
-- People
-- Energy
+Create a 2D vector-style illustration of a climate policy decision card. The card has rounded corners, a dark navy background, and glowing green edges. The center text says ‘Invest in Renewable Energy’. The background has a subtle gradient and a faint globe outline. The art style is minimalist and flat, with modern clean lines and soft lighting.”
 
-The art style should be minimalist, modern, and easy to integrate into a web browser using HTML, CSS, and JavaScript.
-
-Visual Style:
-- Vibrant but balanced color palette (greens, blues, oranges, purples).
-- Simple iconography that conveys meaning instantly.
-- A professional yet playful aesthetic that reflects both education and humor.
-
+Generate multiple variations for cards, icons, and effects in a consistent art style that matches this description.
