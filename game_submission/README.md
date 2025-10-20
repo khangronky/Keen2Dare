@@ -1,4 +1,4 @@
-# Climate Reigns 🌍⚖️
+# Preigns 🌍⚖️
 
 > A browser-based decision-making game about climate policy and sustainability
 
@@ -6,7 +6,7 @@
 
 ## 📖 Overview
 
-**Climate Reigns** is a 2D, browser-based decision-making game inspired by the _Reigns_ series. You play as the **Minister of Climate Affairs**, making tough choices to balance four critical metrics: Environment, Economy, People's Support, and Energy Supply.
+**Preigns** is a 2D, browser-based decision-making game inspired by the _Reigns_ series. You play as the **Minister of Climate Affairs**, making tough choices to balance four critical metrics: Environment, Economy, People's Support, and Energy Supply.
 
 The game aims to raise awareness about **climate action and sustainability challenges** in Vietnam and Australia through an experience that is fun, educational, and slightly satirical.
 
